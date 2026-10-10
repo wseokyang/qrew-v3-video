@@ -1,0 +1,57 @@
+QREW Journey — 반도체 칩 영상판
+완료일: 2026-10-10 (Asia/Seoul)
+
+완성본: QREW-01-journey-chip-40s-1080p.mp4
+40.000초 / 1920×1080 / 30fps / 1200프레임 / H.264 + AAC 48kHz stereo
+파일 크기: 25,347,231 bytes
+SHA-256: 05318948027d28f53b3422988cc564df731b822d03d5a66c15349538029092ca
+
+변경 내용
+Journey의 office, colleague, arrival 장면에 있던 기계 부품을 검은 반도체
+칩과 작은 검정 트레이로 변경했습니다. 기존 인물·구도에 기반해 내장
+imagegen으로 참조 이미지 3장을 수정 생성하고 Google Flow에서 영상화했습니다.
+Flow 모델: Veo 3.1 Lite, 장면당 8초, 1280×720, 24fps.
+최종 편집은 기존과 같은 1080p 캔버스에 확대 출력했습니다.
+
+최종 채택 구간 (무음, 정상 1배속)
+office: journey-chip-office-motion.mp4의 0–4초.
+  편집 0–2초와 4–6초에 순서대로 이어 사용하며 재시작하지 않습니다.
+colleague: journey-chip-colleague-fix1.mp4의 2–4초 → 편집 2–4초.
+arrival: journey-chip-arrival-fix2.mp4의 0–4초 → 편집 14–18초.
+새 영상에 반복, 역재생, 정지 이미지 대체를 사용하지 않았습니다.
+
+유지 내용
+기존 40초 구성, '크랙' 문구와 자막, 음악·효과음, QREW 제품 UI,
+제공된 마지막 엔딩은 유지했습니다. platform/coast/mentor/reaction/retirement
+다섯 영상과 기존 시간 매핑도 그대로입니다. 기존 Journey·Expert·V5 완성본은
+덮어쓰지 않았습니다. Flow 워터마크는 원본에 포함된 상태로 유지합니다.
+
+생성·크레딧 기록
+시작 60개 → 완료 후 0개, 순사용 60크레딧. 추가 구매나 업그레이드 없음.
+총 6개 영상 생성 중 3개 채택. 오디오 생성 실패 3건은 환불 후 재시도했습니다.
+colleague 첫 결과(트레이 복제), arrival 첫 결과(금색 변형), arrival fix1
+(커다란 칩 추가)은 제외했으며 원본과 검수 기록은 flow-raw에 보존했습니다.
+오늘 생성분으로 완료했으며 다음 날 작업 예약은 필요하지 않습니다.
+
+검증 결과
+전체 영상 디코딩 오류 0. 원본 48개와 재사용 자산 26개 해시 보존.
+원본 Journey와 WAV, AAC 스트림, 디코딩 PCM 동일.
+유지 장면 8·12·20·22.5·26·30·34·38초 대표 PNG 픽셀 동일.
+새 세 영상의 1배속, office 두 등장 구간의 연속 진행 확인.
+검은 칩·트레이·손·얼굴 안정성과 실제 인물·비·파도 움직임 시각 검수 통과.
+
+WSL 작업 경로
+/home/wooseok/wsy/motion/ad/journey-chip
+완성본: output/QREW-01-journey-chip-40s-1080p.mp4
+스토리보드: output/01-journey-chip-storyboard.png
+참조 이미지: 01-journey-chip/assets/office.png, colleague.png, arrival.png
+실제 이미지 생성 프롬프트: image-prompts.txt
+Flow 프롬프트: flow-raw/flow-prompts.json 및 flow-*-fix*-prompt.txt
+생성 이력: generation-ledger.json
+최종 검증: output/final-media-validation.json, final-motion-validation.json
+개별 검수: flow-raw/*-review.json
+원본 보존 기록: original-integrity.json, preserved-originals.json
+
+Flow 프로젝트
+https://flow.google.com/project/0d7a2b63-bbe8-44f6-8ce0-a37862319780
+Git 저장소: https://github.com/wseokyang/qrew-v3-video
