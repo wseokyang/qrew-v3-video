@@ -1,0 +1,60 @@
+QREW Expert — 말 끝나기 전에 / 반도체 칩 버전
+2026-10-11 제작, 2026-10-12 완료
+최종 파일: QREW-02-expert-chip-42s-1080p.mp4
+검증 상태: 최종 기술·시각 검증 통과.
+
+42초 / 1920×1080 / 30fps / 1260프레임 / H.264 + AAC / 무더빙.
+원본 Journey·Expert 및 이전 완성본은 보존하고 독립 프로젝트에서 제작.
+
+의도
+후배의 질문이 점점 짧아져도 다음 업무까지 준비한 ‘만능 선배’.
+동일 불량 사례와 조치 이력 → 공통 부품과 관련 제품 → 검토용 회신 초안과 원문 근거.
+Journey와 같은 검은 정사각형 QFP 반도체 칩, 네 면의 은색 리드.
+동료 공개·점심 반전·QREW 제품 화면·기존 38–42초 엔딩 유지.
+
+생성 및 편집
+OpenAI 내장 ImageGen으로 신규 참조 이미지 3장 제작.
+Google Flow Veo 3.1 Lite, 단일 참조 이미지, 16:9, 각 8초.
+case-ready 두 테이크, product-link 한 테이크, reply-ready 두 테이크.
+제품과 회신 두 컷의 오디오 실패를 Flow의 ‘다시 시도’로 무음 복구.
+총 5개 원본을 보존. 기존 50크레딧 → 0크레딧 확인(2026-10-11 23:52 KST).
+새 구매·업그레이드 없음. Flow 원본 1280×720을 최종 1080p 화면에 배치.
+Flow 지역 필수 워터마크 유지.
+
+채택 소스(모두 원래 속도)
+case-ready take2 0–1.8초 → 최종 2–3.8초.
+product-link take1 0–1.9초 → 최종 5.5–7.4초.
+reply-ready take2 0–2.5초 → 최종 9.5–12초.
+사례·회신 생성 결과는 요청한 평면 슬라이드/회전보다 자료를 살짝 들어 보여주고 내려놓는 연출.
+연속 동작이 해당 구간 안에 끝나며 손·컵·칩·자료가 안정적이어서 채택.
+3.8–5, 7.4–9, 12–14초는 코드로 그린 결과 인서트. 한글·칩 도해·연결선은 생성 글자에 의존하지 않음.
+검토용 회신 초안은 사람이 준비한 자료로 표현하며 자동 발송·승인을 주장하지 않음.
+
+기존 소스
+novice 0–4초를 네 등장 구간에서 누적 연속 사용.
+expert 0–3.5초, papers 0.75–2.25초, reveal 0–4.433333초,
+lunch 0–3.566667초, relief 0–3초. 사진 대체·느린 재생·루프 없음.
+reveal 최종 20–24.433333초(133프레임), lunch 24.433333–28초(107프레임).
+전체 42초, 제품 28초와 엔딩 38초 타이밍 유지.
+
+음향
+기존 음악을 보존하고 0–20초의 서류/탭 소리 타이밍을 새 장면에 맞춤.
+20초 이후의 기존 효과음 보존. Flow 생성 음성/오디오 사용 안 함.
+42초 48kHz 스테레오 원본 WAV, -16.16 LUFS, -1.89 dBTP, clipping 0.
+해당 WAV 및 큐 검증: 02-expert-chip/audio/audio-verification.json.
+
+제작 자료
+작업 폴더: /home/wooseok/wsy/motion/ad/expert-chip
+image-prompts.json / flow-raw/flow-prompts.json / shot-plan.json
+원본과 채택 검수: flow-raw/*-review.json
+원본 보존 기준: original-integrity.json(179개), preserved-originals.json(26개)
+최종 검증: output/final-media-validation.json, output/final-motion-validation.json
+
+
+최종 검증 통과
+전체 디코딩 오류 0. 원본179개·재사용26개 해시 유지.
+검수 WAV와 동일 설정 AAC 및 디코딩 PCM 완전히 동일.
+기존 Expert 엔딩 120프레임 RGB 픽셀까지 동일.
+실제 최종 화면 인서트·제품 화면·한글·엔딩 시각 검수 통과.
+최종 크기: 14,655,796 bytes
+SHA256: c8295754d7621cca8ac5daadd0381f8f82ce1a117f23c4c48dabffd0a779ab60
